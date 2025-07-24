@@ -25,45 +25,53 @@ const HeroSection = () => {
             </h1>
             
             <div className="space-y-8">
-              {/* Recognition Blocks */}
-              <div className="space-y-6">
-                <div className="border-l-4 border-rust pl-6">
+              {/* Recognition Blocks - 2x2 Grid */}
+              <div className="grid grid-cols-2 gap-6">
+                <div>
                   <h3 className="text-rust font-gotham font-semibold text-lg mb-2">
                     Recognition
                   </h3>
-                  <p className="text-charcoal leading-relaxed">
+                  <p className="text-charcoal text-sm leading-relaxed">
                     "Restaurant Consultant of the Year 2024"<br />
-                    by Restaurant Guru. Winner of Gujarat Tourism Awards & Food Connoisseurs awards in 2024 and 2022.
+                    by Restaurant Guru.Winner of Gujarat<br />
+                    Tourism Awards & Food Connoisseurs<br />
+                    awards in 2024 and 2022.
                   </p>
                 </div>
 
-                <div className="border-l-4 border-rust pl-6">
+                <div>
                   <h3 className="text-rust font-gotham font-semibold text-lg mb-2">
                     Recognition
                   </h3>
-                  <p className="text-charcoal leading-relaxed">
+                  <p className="text-charcoal text-sm leading-relaxed">
                     "Restaurant Consultant of the Year 2024"<br />
-                    by Restaurant Guru. Winner of Gujarat Tourism Awards & Food Connoisseurs awards in 2024 and 2022.
+                    by Restaurant Guru.Winner of Gujarat<br />
+                    Tourism Awards & Food Connoisseurs<br />
+                    awards in 2024 and 2022.
                   </p>
                 </div>
 
-                <div className="border-l-4 border-rust pl-6">
+                <div>
                   <h3 className="text-rust font-gotham font-semibold text-lg mb-2">
                     Recognition
                   </h3>
-                  <p className="text-charcoal leading-relaxed">
+                  <p className="text-charcoal text-sm leading-relaxed">
                     "Restaurant Consultant of the Year 2024"<br />
-                    by Restaurant Guru. Winner of Gujarat Tourism Awards & Food Connoisseurs awards in 2024 and 2022.
+                    by Restaurant Guru.Winner of Gujarat<br />
+                    Tourism Awards & Food Connoisseurs<br />
+                    awards in 2024 and 2022.
                   </p>
                 </div>
 
-                <div className="border-l-4 border-rust pl-6">
+                <div>
                   <h3 className="text-rust font-gotham font-semibold text-lg mb-2">
                     Recognition
                   </h3>
-                  <p className="text-charcoal leading-relaxed">
+                  <p className="text-charcoal text-sm leading-relaxed">
                     "Restaurant Consultant of the Year 2024"<br />
-                    by Restaurant Guru. Winner of Gujarat Tourism Awards & Food Connoisseurs awards in 2024 and 2022.
+                    by Restaurant Guru.Winner of Gujarat<br />
+                    Tourism Awards & Food Connoisseurs<br />
+                    awards in 2024 and 2022.
                   </p>
                 </div>
               </div>
