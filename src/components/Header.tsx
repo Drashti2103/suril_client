@@ -11,6 +11,8 @@ const Header = () => {
     { name: "PROJECTS", href: "/projects" },
     { name: "EVENTS", href: "/events" },
     { name: "BLOGS", href: "/blogs" },
+    { name: "AWARDS", href: "/awards" },
+    { name: "PRESS", href: "/press" },
   ];
 
   const isActive = (href: string) => {
@@ -40,18 +42,13 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* CTA Buttons */}
-        <div className="flex items-center space-x-4">
+        {/* CTA Button */}
+        <div className="flex items-center">
           <Button
             variant="outline"
             className="border-white text-white bg-transparent hover:bg-white hover:text-rust font-gotham text-sm px-6 py-2"
           >
             GET IN TOUCH
-          </Button>
-          <Button
-            className="bg-white text-rust hover:bg-ivory font-gotham text-sm px-6 py-2"
-          >
-            Apply for Job
           </Button>
         </div>
       </div>
