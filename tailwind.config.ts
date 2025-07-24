@@ -24,6 +24,19 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// Editorial Design System
+				ivory: 'hsl(var(--ivory))',
+				cream: 'hsl(var(--cream))',
+				rust: {
+					DEFAULT: 'hsl(var(--rust))',
+					light: 'hsl(var(--rust-light))',
+					dark: 'hsl(var(--rust-dark))',
+				},
+				stone: 'hsl(var(--stone))',
+				charcoal: 'hsl(var(--charcoal))',
+				'soft-black': 'hsl(var(--soft-black))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -62,6 +75,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'lato': ['Lato', 'sans-serif'],
+				'gotham': ['Gotham', 'Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
