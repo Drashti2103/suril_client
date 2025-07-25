@@ -6,7 +6,6 @@ const Header = () => {
   
   const navigation = [
     { name: "HOME", href: "/" },
-    { name: "ABOUT", href: "/about" },
     { name: "SERVICES", href: "/services" },
     { name: "PROJECTS", href: "/projects" },
     { name: "EVENTS", href: "/events" },
@@ -20,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header className="hero-rust py-4 px-6">
+    <header className="bg-[#B7410E] py-4 px-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="text-white text-xl font-gotham font-semibold tracking-wider">

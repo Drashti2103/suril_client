@@ -79,28 +79,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Instagram Bar */}
-      <div className="border-t border-stone py-8">
-        <div className="max-w-7xl mx-auto px-8">
-          <h5 className="gotham-heading font-medium text-center text-muted-foreground mb-6">
-            @suril_udeshi
-          </h5>
-          <div className="grid grid-cols-4 md:grid-cols-8 gap-2">
-            {[...Array(8)].map((_, index) => (
-              <div
-                key={index}
-                className="aspect-square bg-stone rounded opacity-60 hover:opacity-100 transition-opacity editorial-hover"
-              >
-                <div className="w-full h-full bg-gradient-to-br from-cream to-stone rounded flex items-center justify-center text-muted-foreground">
-                  📸
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      </div>  
 
       {/* Copyright */}
       <div className="border-t border-stone py-6">

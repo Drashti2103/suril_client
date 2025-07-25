@@ -1,0 +1,128 @@
+.service-title-heading {
+    position: relative;
+    margin-bottom: 45px;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 2.5rem;
+    color: #1e2331;
+  }
+  
+  .service-title-heading::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #A4442E;
+    bottom: -25px;
+    margin: auto;
+    right: 0;
+  }
+  
+  .service-title-description {
+    padding: 0 100px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .service-icon {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .service-icon i {
+    font-size: 40px;
+    color: #A4442E;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  .service-wrap {
+    border: 1px solid #e6e6e6;
+    padding: 50px 30px;
+    position: relative;
+    background: white;
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .service-wrap:hover {
+    /* fallback, will be overridden below */
+    background-image: none;
+  }
+
+  .service-wrap:nth-child(1):hover {
+    background-image: url(/images/food/food3.png);
+  }
+  .service-wrap:nth-child(2):hover {
+    background-image: url(/images/food/food3.png);
+  }
+  .service-wrap:nth-child(3):hover {
+    background-image: url(/images/food/food3.png);
+  }
+  .service-wrap:nth-child(4):hover {
+    background-image: url(/images/food/food3.png);
+  }
+  
+  .service-wrap:hover:before {
+    background: rgba(0, 0, 0, 0.29);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    content: "";
+    top: 0;
+    opacity: 1;
+  }
+  
+  .service-wrap:hover .service-wrap-title,
+  .service-wrap:hover .service-wrap-description {
+    color: #fff;
+  }
+  
+  .service-wrap-title {
+    font-weight: 600;
+    color: #1e2331;
+    margin-bottom: 17px;
+    font-size: 18px;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .service-wrap-description {
+    position: relative;
+    z-index: 2;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .service-wrap-link {
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    color: #A4442E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .service-wrap-link:hover {
+    color: #8B3826;
+  }
+  
+  @media (max-width: 768px) {
+    .service-title-description {
+      padding: 0 20px;
+    }
+    
+    .service-wrap {
+      margin: 0 !important;
+    }
+  }
