@@ -108,12 +108,13 @@ const ProjectsSection: React.FC = () => {
             transition: all 0.3s ease;
           }
           
-          .project-icon-mobile-colored {
+          /* Mobile: Default colored, Desktop: Default grayscale */
+          .project-icon-grayscale {
             filter: grayscale(0%) brightness(1);
           }
           
-          @media screen and (min-width: 769px) {
-            .project-icon-mobile-colored {
+          @media screen and (min-width: 768px) {
+            .project-icon-grayscale {
               filter: grayscale(100%) brightness(0.8);
             }
           }
@@ -193,9 +194,9 @@ const ProjectsSection: React.FC = () => {
                     <img 
                       src={project.icon} 
                       alt={project.title}
-                      className={`w-full h-full object-contain p-1 project-icon-mobile-colored ${
+                      className={`w-full h-full object-contain p-1 ${
                         hoveredProject === project.title ? 'project-icon-colored' : 'project-icon-grayscale'
-                      }`}
+                      } md:project-icon-grayscale md:hover:project-icon-colored`}
                       onError={(e) => {
                         e.currentTarget.src = "/placeholder.svg";
                       }}
