@@ -16,17 +16,6 @@ const knowMoreLinks = [
   "#services"
 ];
 
-const marqueeContent = [
-  "restaurant consultant",
-  "culinary specialist",
-  "Food innovator",
-  "business advisor",
-  "Brand curator",
-  "industry expert",
-  "operations guru",
-  "market specialist"
-].join(" · ");
-
 const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -35,29 +24,36 @@ const HeroSection = () => {
       <section ref={containerRef} className="relative w-full md:h-[90vh] bg-white overflow-hidden pb-0 md:pb-8 mt-14">
         <div className="flex flex-col lg:flex-row h-full">
           {/* LEFT SIDE - Image with offset bg */}
-          <div className="hidden md:flex w-full lg:w-1/2 relative items-start justify-center h-full">
+          <div className="flex w-full lg:w-1/2 relative items-start justify-center h-full mb-8 lg:mb-0">
             <div className="relative w-full h-full flex items-start justify-center">
-              <div style={{ width: '500px', height: '600px', maxWidth: '90vw', marginTop: '0px' }} className="relative flex items-center justify-center">
+              <div 
+                className="relative flex items-center justify-center mx-auto"
+                style={{ 
+                  width: 'min(500px, 90vw)', 
+                  height: 'min(600px, 70vh)', 
+                  marginTop: '0px' 
+                }}
+              >
                 {/* Offset colored box behind image */}
                 <div
                   className="absolute z-0"
                   style={{
-                    width: '480px',
-                    height: '580px',
+                    width: 'min(480px, 88vw)',
+                    height: 'min(580px, 68vh)',
                     background: '#B7410E',
-                    left: '30px',
-                    top: '30px',
+                    right: 'min(-10px, -1vw)',
+                    bottom: 'min(-10px, -2vh)',
                     boxShadow: '0 8px 32px 0 rgba(183,65,14,0.10)',
                   }}
                 />
                 {/* Main static image */}
                 <div className="relative z-10">
                   <img
-                    src={images[5]}
+                    src={images[1]}
                     alt="Suril Udeshi"
                     style={{
-                      width: "500px",
-                      height: "600px",
+                      width: "min(500px, 90vw)",
+                      height: "min(600px, 70vh)",
                       objectFit: "cover",
                       borderRadius: 0,
                       boxShadow: "0 8px 32px 0 rgba(0,0,0,0.10)",
@@ -77,10 +73,10 @@ const HeroSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-8">
                 {/* Recognition */}
                 <div className="flex flex-col h-full">
-                  <h3 className="text-[#B7410E] text-base md:text-lg font-semibold mb-2 tracking-[0.05em] md:mb-3 font-[Gotham,sans-serif]">
+                  <h2 className="text-[#B7410E] text-base md:text-lg font-semibold mb-2 tracking-[0.05em] md:mb-3 font-[Gotham,sans-serif]">
                     Recognition
-                  </h3>
-                  <p className="text-gray-600 text-sm md:text-base leading-relaxed tracking-[0.02em] flex-grow font-[Lato,sans-serif] mb-0">
+                  </h2>
+                  <p className="text-gray-600 text-xs md:text-sm leading-relaxed tracking-[0.02em] flex-grow font-[Lato,sans-serif] mb-0">
                     <span className="text-black font-medium font-[Lato,sans-serif]">"Restaurant Consultant of the Year 2024"</span> by Restaurant Guru. 
                     Winner of Gujarat Tourism Awards & Food Connoisseurs awards in 2024 and 2022.
                   </p>
@@ -90,10 +86,10 @@ const HeroSection = () => {
                 </div>
                 {/* Notable Clients */}
                 <div className="flex flex-col h-full">
-                  <h3 className="text-[#B7410E] text-base md:text-lg font-semibold mb-2 tracking-[0.05em] md:mb-3 font-[Gotham,sans-serif]">
+                  <h2 className="text-[#B7410E] text-base md:text-lg font-semibold mb-2 tracking-[0.05em] md:mb-3 font-[Gotham,sans-serif]">
                     Notable Clients
-                  </h3>
-                  <p className="text-gray-600 text-sm md:text-base leading-relaxed tracking-[0.02em] flex-grow font-[Lato,sans-serif] mb-0">
+                  </h2>
+                  <p className="text-gray-600 text-xs md:text-sm leading-relaxed tracking-[0.02em] flex-grow font-[Lato,sans-serif] mb-0">
                     At Mango, Under The Neem Trees, Patang, Kuhoo, Pathikashram, 
                     Starz Club, The Bizz Hotel, Sun Solace.
                   </p>
@@ -103,10 +99,10 @@ const HeroSection = () => {
                 </div>
                 {/* Expertise */}
                 <div className="flex flex-col h-full">
-                  <h3 className="text-[#B7410E] text-base md:text-lg font-semibold mb-2 tracking-[0.05em] md:mb-3 font-[Gotham,sans-serif]">
+                  <h2 className="text-[#B7410E] text-base md:text-lg font-semibold mb-2 tracking-[0.05em] md:mb-3 font-[Gotham,sans-serif]">
                     Expertise
-                  </h3>
-                  <p className="text-gray-600 text-sm md:text-base leading-relaxed tracking-[0.02em] flex-grow font-[Lato,sans-serif] mb-0">
+                  </h2>
+                  <p className="text-gray-600 text-xs md:text-sm leading-relaxed tracking-[0.02em] flex-grow font-[Lato,sans-serif] mb-0">
                     High-end restaurant conceptualization and operations. 
                     <span className="text-black font-medium font-[Lato,sans-serif]"> Vegetarian cuisine specialist</span> transforming 
                     dishes into exquisite masterpieces.
@@ -117,10 +113,10 @@ const HeroSection = () => {
                 </div>
                 {/* Services */}
                 <div className="flex flex-col h-full">
-                  <h3 className="text-[#B7410E] text-base md:text-lg font-semibold mb-2 tracking-[0.05em] md:mb-3 font-[Gotham,sans-serif]">
+                  <h2 className="text-[#B7410E] text-base md:text-lg font-semibold mb-2 tracking-[0.05em] md:mb-3 font-[Gotham,sans-serif]">
                     Services
-                  </h3>
-                  <p className="text-gray-600 text-sm md:text-base leading-relaxed tracking-[0.02em] flex-grow font-[Lato,sans-serif] mb-0">
+                  </h2>
+                  <p className="text-gray-600 text-xs md:text-sm leading-relaxed tracking-[0.02em] flex-grow font-[Lato,sans-serif] mb-0">
                     Menu engineering, team planning, kitchen design, tableware curation, 
                     operations management, and restaurant makeovers.
                   </p>
@@ -137,26 +133,6 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      {/* Marquee */}
-      <div className="w-full bg-[#B7410E] py-3 overflow-hidden">
-        <div className="relative w-full">
-          <div className="marquee whitespace-nowrap text-white font-[Gotham,sans-serif] text-lg font-semibold tracking-wide">
-            <span>{marqueeContent}&nbsp;&nbsp;&nbsp;</span>
-            <span>{marqueeContent}&nbsp;&nbsp;&nbsp;</span>
-            <span>{marqueeContent}&nbsp;&nbsp;&nbsp;</span>
-          </div>
-        </div>
-      </div>
-      <style>{`
-        .marquee {
-          display: inline-block;
-          animation: marquee 22s linear infinite;
-        }
-        @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-33.333%); }
-        }
-      `}</style>
     </div>
   );
 };
