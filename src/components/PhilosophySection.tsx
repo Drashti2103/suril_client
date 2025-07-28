@@ -22,7 +22,7 @@ const PhilosophySection = () => {
           }
           
           .bento-item {
-            border-radius: 12px;
+            border-radius: 0;
             overflow: hidden;
             transition: all 0.3s ease;
             border: 2px solid transparent;
@@ -93,14 +93,17 @@ const PhilosophySection = () => {
           /* Small tablets - align with bento grid height */
           @media (min-width: 641px) and (max-width: 768px) {
             .content-container {
-              min-height: 480px; /* Match mobile bento: 6 rows × 80px per row */
+              min-height: 480px;
             }
           }
           
-          /* Medium tablets - align with bento grid */
+          /* iPad and medium tablets - better height alignment */
           @media (min-width: 769px) and (max-width: 1024px) {
             .content-container {
-              min-height: 500px; /* Match tablet bento: 3 rows × 150px + gaps */
+              min-height: 520px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
             }
           }
           
@@ -115,6 +118,16 @@ const PhilosophySection = () => {
           @media (min-width: 1025px) {
             .bento-grid {
               grid-template-rows: repeat(3, 180px);
+            }
+          }
+          
+          /* iPad specific adjustments */
+          @media (min-width: 768px) and (max-width: 834px) {
+            .content-container {
+              min-height: 500px;
+            }
+            .bento-grid {
+              grid-template-rows: repeat(3, 155px);
             }
           }
           
@@ -198,10 +211,38 @@ const PhilosophySection = () => {
               grid-row: span 1;
             }
           }
+          
+          /* iPad Pro specific spacing fixes */
+          @media (min-width: 820px) and (max-width: 850px) and (min-height: 1000px) {
+            .philosophy-section {
+              padding-top: 2rem !important;
+            }
+          }
+          
+          /* iPad Pro 11" landscape */
+          @media (min-width: 1180px) and (max-width: 1210px) and (max-height: 850px) {
+            .philosophy-section {
+              padding-top: 2.5rem !important;
+            }
+          }
+          
+          /* iPad Pro 12.9" portrait */
+          @media (min-width: 1010px) and (max-width: 1040px) and (min-height: 1350px) {
+            .philosophy-section {
+              padding-top: 2rem !important;
+            }
+          }
+          
+          /* iPad Pro 12.9" landscape */
+          @media (min-width: 1350px) and (max-width: 1380px) and (max-height: 1040px) {
+            .philosophy-section {
+              padding-top: 3rem !important;
+            }
+          }
         `}
       </style>
       
-      <section className="pt-8 pb-6 sm:pt-12 sm:pb-8 md:pt-16 md:pb-10 lg:pt-12 lg:pb-6" style={{ backgroundColor: '#B7410E' }}>
+      <section className="philosophy-section pt-12 pb-8 sm:pt-16 sm:pb-10 md:pt-20 md:pb-12 lg:pt-16 lg:pb-8" style={{ backgroundColor: '#B7410E' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             {/* Left Content - Center aligned with bento grid */}

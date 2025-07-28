@@ -21,7 +21,24 @@ const HeroSection = () => {
 
   return (
     <div className="relative">
-      <section ref={containerRef} className="relative w-full md:h-[90vh] bg-white overflow-hidden pb-8 sm:pb-12 md:pb-16 lg:pb-12 mt-14">
+      <style>
+        {`
+          /* iPad Pro specific height reduction */
+          @media (min-width: 1020px) and (max-width: 1028px) and (min-height: 1360px) and (max-height: 1370px) {
+            .hero-section {
+              height: 70vh !important;
+            }
+          }
+          
+          /* iPad Pro 12.9" landscape orientation */
+          @media (min-width: 1360px) and (max-width: 1370px) and (min-height: 1020px) and (max-height: 1028px) {
+            .hero-section {
+              height: 75vh !important;
+            }
+          }
+        `}
+      </style>
+      <section ref={containerRef} className="hero-section relative w-full md:h-[90vh] bg-white overflow-hidden pb-8 sm:pb-12 md:pb-16 lg:pb-12 mt-14">
         <div className="flex flex-col lg:flex-row h-full">
           {/* LEFT SIDE - Image with offset bg */}
           <div className="flex w-full lg:w-1/2 relative items-start justify-center h-full mb-8 lg:mb-0">
