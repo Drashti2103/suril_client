@@ -231,7 +231,7 @@ const ProjectsSection: React.FC = () => {
           <div className="flex justify-center mt-12">
             <a
               href="#"
-              className="px-8 py-3 border-2 border-[#a4442e] text-[#a4442e] font-[Gotham,sans-serif] text-lg font-bold rounded-full transition-all duration-300 hover:bg-[#a4442e] hover:text-white shadow-md hover:shadow-lg"
+              className="px-8 py-3 border-2 border-[#a4442e] text-[#a4442e] font-[Gotham,sans-serif] text-lg font-bold rounded-none transition-all duration-300 hover:bg-[#a4442e] hover:text-white shadow-md hover:shadow-lg"
             >
               View All Projects
             </a>
