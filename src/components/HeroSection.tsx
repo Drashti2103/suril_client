@@ -23,31 +23,63 @@ const HeroSection = () => {
     <div className="relative">
       <style>
         {`
-          /* iPad Pro specific height reduction */
-          @media (min-width: 1020px) and (max-width: 1028px) and (min-height: 1360px) and (max-height: 1370px) {
+          /* Ensure minimum height on all devices */
+          .hero-section {
+            min-height: 100vh;
+          }
+          
+          /* Mobile devices */
+          @media (max-width: 768px) {
             .hero-section {
-              height: 70vh !important;
+              min-height: 100vh;
+              height: auto;
+            }
+            .hero-image-container {
+              min-height: 60vh;
+              height: 60vh;
             }
           }
           
-          /* iPad Pro 12.9" landscape orientation */
-          @media (min-width: 1360px) and (max-width: 1370px) and (min-height: 1020px) and (max-height: 1028px) {
+          /* Tablet devices */
+          @media (min-width: 769px) and (max-width: 1024px) {
             .hero-section {
-              height: 75vh !important;
+              min-height: 90vh;
+            }
+            .hero-image-container {
+              min-height: 70vh;
+              height: 70vh;
+            }
+          }
+          
+          /* Desktop devices */
+          @media (min-width: 1025px) {
+            .hero-section {
+              min-height: 90vh;
+            }
+            .hero-image-container {
+              min-height: 80vh;
+              height: 80vh;
+            }
+          }
+          
+          /* Large desktop devices */
+          @media (min-width: 1440px) {
+            .hero-image-container {
+              min-height: 85vh;
+              height: 85vh;
             }
           }
         `}
       </style>
-      <section ref={containerRef} className="hero-section relative w-full md:h-[90vh] bg-white overflow-hidden pb-8 sm:pb-12 md:pb-16 lg:pb-12 mt-14">
+      <section ref={containerRef} className="hero-section relative w-full bg-white overflow-hidden pb-8 sm:pb-12 md:pb-16 lg:pb-12 mt-14">
         <div className="flex flex-col lg:flex-row h-full">
           {/* LEFT SIDE - Image with offset bg */}
           <div className="flex w-full lg:w-1/2 relative items-start justify-center h-full mb-8 lg:mb-0">
             <div className="relative w-full h-full flex items-start justify-center">
               <div 
-                className="relative flex items-center justify-center mx-auto"
+                className="relative flex items-center justify-center mx-auto hero-image-container"
                 style={{ 
                   width: 'min(500px, 90vw)', 
-                  height: 'min(600px, 70vh)', 
                   marginTop: '0px' 
                 }}
               >
@@ -56,7 +88,7 @@ const HeroSection = () => {
                   className="absolute z-0"
                   style={{
                     width: 'min(480px, 88vw)',
-                    height: 'min(580px, 68vh)',
+                    height: '100%',
                     background: '#B7410E',
                     right: 'min(-10px, -1vw)',
                     bottom: 'min(-10px, -2vh)',
@@ -64,13 +96,13 @@ const HeroSection = () => {
                   }}
                 />
                 {/* Main static image */}
-                <div className="relative z-10">
+                <div className="relative z-10 w-full h-full">
                   <img
                     src={images[1]}
                     alt="Suril Udeshi"
                     style={{
-                      width: "min(500px, 90vw)",
-                      height: "min(600px, 70vh)",
+                      width: "100%",
+                      height: "100%",
                       objectFit: "cover",
                       borderRadius: 0,
                       boxShadow: "0 8px 32px 0 rgba(0,0,0,0.10)",

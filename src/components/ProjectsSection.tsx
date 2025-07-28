@@ -108,6 +108,16 @@ const ProjectsSection: React.FC = () => {
             transition: all 0.3s ease;
           }
           
+          .project-icon-mobile-colored {
+            filter: grayscale(0%) brightness(1);
+          }
+          
+          @media screen and (min-width: 769px) {
+            .project-icon-mobile-colored {
+              filter: grayscale(100%) brightness(0.8);
+            }
+          }
+          
           @media screen and (max-width: 640px) {
             .projects-grid {
               grid-template-columns: repeat(2, 1fr);
@@ -183,7 +193,7 @@ const ProjectsSection: React.FC = () => {
                     <img 
                       src={project.icon} 
                       alt={project.title}
-                      className={`w-full h-full object-contain p-1 ${
+                      className={`w-full h-full object-contain p-1 project-icon-mobile-colored ${
                         hoveredProject === project.title ? 'project-icon-colored' : 'project-icon-grayscale'
                       }`}
                       onError={(e) => {
