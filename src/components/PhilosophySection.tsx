@@ -1,103 +1,249 @@
-import './PhilosophySection.css';
-
 const PhilosophySection = () => {
-  const expertisePoints = [
-    {
-      number: "01",
-      title: "Innovative Approach",
-      description: "Suril has a remarkable ability to transform Indian & international dishes into exquisite vegetarian masterpieces with his innovative culinary strategies.",
-      icon: "fas fa-layer-group"
-    },
-    {
-      number: "02", 
-      title: "Stellar Reputation",
-      description: "His visionary strategies have consistently propelled his consulted restaurants to new heights of success, earning him recognition in the culinary world.",
-      icon: "far fa-chart-bar"
-    },
-    {
-      number: "03",
-      title: "Creative Excellence", 
-      description: "Connoisseurs are continually delighted by the inventive twists he brings to vegetarian dining through masterful flavor combinations.",
-      icon: "fas fa-database"
-    },
-    {
-      number: "04",
-      title: "Definitive Choice",
-      description: "Suril's passion for expanding the boundaries of vegetarian cuisine ensures each dish is a delightful fusion of flavour, creativity, and nutritional balance.",
-      icon: "fas fa-cogs"
-    }
+  // Sample image URLs - replace with your actual images
+  const bentoImages = [
+    "/images/food/3.jpg",
+    "/images/food/4.jpg",
+    "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=300&fit=crop",
+    "/images/food/2.jpg?h=300&fit=crop",
+    "/images/food/food3.png",
+    "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=300&h=300&fit=crop"
   ];
 
   return (
     <>
-      {/* Font Awesome CDN */}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+      <style>
+        {`
+          .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 1rem;
+            height: fit-content;
+          }
+          
+          .bento-item {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+          }
+          
+          .bento-item:hover {
+            border-color: #F7F4F4;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+          }
+          
+          .bento-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+          }
+          
+          .bento-item:hover img {
+            transform: scale(1.05);
+          }
+          
+          /* Bento grid layout */
+          .bento-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 1;
+          }
+          
+          .bento-item:nth-child(2) {
+            grid-column: span 2;
+            grid-row: span 2;
+          }
+          
+          .bento-item:nth-child(3) {
+            grid-column: span 2;
+            grid-row: span 1;
+          }
+          
+          .bento-item:nth-child(4) {
+            grid-column: span 1;
+            grid-row: span 1;
+          }
+          
+          .bento-item:nth-child(5) {
+            grid-column: span 2;
+            grid-row: span 1;
+          }
+          
+          .bento-item:nth-child(6) {
+            grid-column: span 1;
+            grid-row: span 1;
+          }
+          
+          .content-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+          }
+          
+          /* Mobile - natural content flow */
+          @media (max-width: 640px) {
+            .content-container {
+              min-height: auto;
+            }
+          }
+          
+          /* Small tablets - align with bento grid height */
+          @media (min-width: 641px) and (max-width: 768px) {
+            .content-container {
+              min-height: 480px; /* Match mobile bento: 6 rows × 80px per row */
+            }
+          }
+          
+          /* Medium tablets - align with bento grid */
+          @media (min-width: 769px) and (max-width: 1024px) {
+            .content-container {
+              min-height: 500px; /* Match tablet bento: 3 rows × 150px + gaps */
+            }
+          }
+          
+          /* Large screens - match bento grid height */
+          @media (min-width: 1025px) {
+            .content-container {
+              min-height: 620px; /* Match large bento: 3 rows × 180px + gaps + padding */
+            }
+          }
+          
+          /* Large screens */
+          @media (min-width: 1025px) {
+            .bento-grid {
+              grid-template-rows: repeat(3, 180px);
+            }
+          }
+          
+          /* Tablet landscape */
+          @media (max-width: 1024px) and (min-width: 769px) {
+            .bento-grid {
+              grid-template-columns: repeat(3, 1fr);
+              grid-template-rows: repeat(3, 160px);
+              gap: 0.75rem;
+            }
+            
+            .bento-item:nth-child(1) {
+              grid-column: span 2;
+              grid-row: span 1;
+            }
+            
+            .bento-item:nth-child(2) {
+              grid-column: span 1;
+              grid-row: span 2;
+            }
+            
+            .bento-item:nth-child(3) {
+              grid-column: span 2;
+              grid-row: span 1;
+            }
+            
+            .bento-item:nth-child(4) {
+              grid-column: span 1;
+              grid-row: span 1;
+            }
+            
+            .bento-item:nth-child(5) {
+              grid-column: span 2;
+              grid-row: span 1;
+            }
+            
+            .bento-item:nth-child(6) {
+              grid-column: span 1;
+              grid-row: span 1;
+            }
+          }
+          
+          /* Tablet portrait */
+          @media (max-width: 768px) and (min-width: 641px) {
+            .bento-grid {
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: repeat(3, 150px);
+              gap: 0.5rem;
+            }
+            
+            .bento-item:nth-child(1),
+            .bento-item:nth-child(3),
+            .bento-item:nth-child(5) {
+              grid-column: span 2;
+              grid-row: span 1;
+            }
+            
+            .bento-item:nth-child(2),
+            .bento-item:nth-child(4),
+            .bento-item:nth-child(6) {
+              grid-column: span 1;
+              grid-row: span 1;
+            }
+          }
+          
+          /* Mobile */
+          @media (max-width: 640px) {
+            .bento-grid {
+              grid-template-columns: 1fr;
+              grid-template-rows: repeat(6, 180px);
+              gap: 0.75rem;
+            }
+            
+            .bento-item:nth-child(1),
+            .bento-item:nth-child(2),
+            .bento-item:nth-child(3),
+            .bento-item:nth-child(4),
+            .bento-item:nth-child(5),
+            .bento-item:nth-child(6) {
+              grid-column: span 1;
+              grid-row: span 1;
+            }
+          }
+        `}
+      </style>
       
-      <section className="py-20 lg:py-32" style={{ backgroundColor: '#F7F4F4' }}>
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid lg:grid-cols-12 gap-16 lg:gap-20 items-center">
-            {/* Left Content - Reduced from lg:grid-cols-2 to smaller span */}
-            <div className="lg:col-span-4">
-              <h2 className="text-4xl lg:text-5xl font-light text-soft-black mb-8 leading-tight font-[Gotham,sans-serif]">
-                <span className="font-bold" style={{ color: '#A4442E' }}>Veg-Culinary</span><br />
-                <span>Expert</span>
-              </h2>
-              
-              <div className="space-y-6 mb-10">
-                <p className="text-lg text-gray-700 leading-relaxed font-[Lato,sans-serif]">
-                  Suril Udeshi has an unparalleled expertise in vegetarian cuisine. Known for his 
-                  innovative approach, Suril has a remarkable ability to transform indian & 
-                  international dishes into exquisite vegetarian masterpieces.
-                </p>
-                
-                <p className="text-lg text-gray-700 leading-relaxed font-[Lato,sans-serif]">
-                  His visionary strategies have consistently propelled his consulted restaurants to new heights 
-                  of success, earning him a stellar reputation in the culinary world.
-                </p>
-                
-                <p className="text-lg text-gray-700 leading-relaxed font-[Lato,sans-serif]">
-                  Connoisseurs are continually delighted by the inventive twists he brings to 
-                  vegetarian dining.
-                </p>
-              </div>
-            </div>
-
-            {/* Right Grid - Expanded to take more space */}
-            <div className="lg:col-span-8 relative">
-
-              {/* Central Circle */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="w-48 h-48 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center shadow-lg">
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-2" style={{ color: '#A4442E', fontFamily: 'Gotham, sans-serif' }}>
-                      RESTAURANT<br />EXPERT
-                    </h3>
-                    <div className="text-3xl">🍽️</div>
+      <section className="pt-8 pb-6 sm:pt-12 sm:pb-8 md:pt-16 md:pb-10 lg:pt-12 lg:pb-6" style={{ backgroundColor: '#B7410E' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            {/* Left Content - Center aligned with bento grid */}
+            <div className="lg:col-span-6">
+              <div className="content-container">
+                <div>
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-6 lg:mb-8 leading-tight font-[Gotham,sans-serif]">
+                    <span className="font-bold">Veg-Culinary</span><br />
+                    <span>Expert</span>
+                  </h2>
+                  
+                  <div className="space-y-4 lg:space-y-6">
+                    <p className="text-base lg:text-lg leading-relaxed font-[Lato,sans-serif]" style={{ color: '#F7F4F4' }}>
+                      Suril Udeshi has an unparalleled expertise in vegetarian cuisine. Known for his 
+                      innovative approach, Suril has a remarkable ability to transform Indian & 
+                      international dishes into exquisite vegetarian masterpieces.
+                    </p>
+                    
+                    <p className="text-base lg:text-lg leading-relaxed font-[Lato,sans-serif]" style={{ color: '#F7F4F4' }}>
+                      His visionary strategies have consistently propelled his consulted restaurants to new heights 
+                      of success, earning him a stellar reputation in the culinary world.
+                    </p>
+                    
+                    <p className="text-base lg:text-lg leading-relaxed font-[Lato,sans-serif]" style={{ color: '#F7F4F4' }}>
+                      Connoisseurs are continually delighted by the inventive twists he brings to 
+                      vegetarian dining.
+                    </p>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Corner Cards */}
-              <div className="grid grid-cols-2 gap-8 relative z-0">
-                {expertisePoints.map((point, index) => (
-                  <div
-                    key={index}
-                    className={`service-wrap ${
-                      index === 0 ? 'mt-0 mr-12' : 
-                      index === 1 ? 'mt-0 ml-12' : 
-                      index === 2 ? 'mb-0 mr-12' : 
-                      'mb-0 ml-12'
-                    }`}
-                  >
-                    <div className="service-icon text-center">
-                      <i className={point.icon}></i>
-                    </div>
-                    <h4 className="service-wrap-title">
-                      {point.title}
-                    </h4>
-                    <p className="service-wrap-description">
-                      {point.description}
-                    </p>
+            {/* Right Side - Bento Grid */}
+            <div className="lg:col-span-6">
+              <div className="bento-grid">
+                {bentoImages.map((image, index) => (
+                  <div key={index} className="bento-item">
+                    <img
+                      src={image}
+                      alt={`Culinary expertise ${index + 1}`}
+                      loading="lazy"
+                    />
                   </div>
                 ))}
               </div>

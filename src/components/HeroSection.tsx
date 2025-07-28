@@ -21,7 +21,7 @@ const HeroSection = () => {
 
   return (
     <div className="relative">
-      <section ref={containerRef} className="relative w-full md:h-[90vh] bg-white overflow-hidden pb-0 md:pb-8 mt-14">
+      <section ref={containerRef} className="relative w-full md:h-[90vh] bg-white overflow-hidden pb-8 sm:pb-12 md:pb-16 lg:pb-12 mt-14">
         <div className="flex flex-col lg:flex-row h-full">
           {/* LEFT SIDE - Image with offset bg */}
           <div className="flex w-full lg:w-1/2 relative items-start justify-center h-full mb-8 lg:mb-0">
