@@ -46,13 +46,13 @@ const CTASection = () => {
         {/* Header Section */}
         <div className="text-center mb-12 md:mb-16">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#B7410E] mb-4" style={{ fontFamily: 'Gotham, sans-serif' }}>
-              Get In Touch
+              GET IN TOUCH
             </h2>
           <div className="w-24 h-0.5 mx-auto mb-6">
             {/* <div className="w-full h-full bg-gradient-to-r from-transparent via-[#B7410E] to-transparent"></div> */}
           </div>
           <p className="text-gray-600 text-lg md:text-xl font-[Lato,sans-serif] max-w-2xl mx-auto leading-relaxed">
-            Ready to transform your restaurant vision into reality? Let's discuss your project.
+            Ready to transform your restaurant vision into reality? <span className="text-[#B7410E] italic">Let's discuss your project.</span>
           </p>
         </div>
 
