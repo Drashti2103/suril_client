@@ -52,7 +52,8 @@ const CTASection = () => {
             {/* <div className="w-full h-full bg-gradient-to-r from-transparent via-[#B7410E] to-transparent"></div> */}
           </div>
           <p className="text-gray-600 text-lg md:text-xl font-[Lato,sans-serif] max-w-2xl mx-auto leading-relaxed">
-            Ready to transform your restaurant vision into reality? <span className="text-[#B7410E] italic">Let's discuss your project.</span>
+            Ready to transform your restaurant vision into reality?<br />
+            <span className="text-[#B7410E] italic">Let's discuss your project.</span>
           </p>
         </div>
 
@@ -117,7 +118,7 @@ const CTASection = () => {
 
           {/* Right Column - Form */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-[20px] p-0.5 bg-gradient-to-br from-[#B7410E]/10 to-[#B7410E]/5">
+            <div className="relative overflow-hidden p-0.5 bg-gradient-to-br from-[#B7410E]/10 to-[#B7410E]/5">
               {/* Animated Background Elements */}
               <div 
                 className="absolute w-[400%] h-[60%] bottom-[-15px] right-[-300%] rounded-full pointer-events-none z-10 opacity-60"
@@ -135,7 +136,7 @@ const CTASection = () => {
               ></div>
 
               {/* Form Container */}
-              <div className="relative z-20 bg-gradient-to-b from-white to-gray-50 border-2 border-[#B7410E] rounded-[20px] p-8">
+              <div className="relative z-20 bg-gradient-to-b from-white to-gray-50 border border-[#B7410E] p-8">
                 <div className="space-y-6">
                   <div>
                     <label className="block text-gray-600 text-sm font-medium mb-2 font-[Gotham,sans-serif]">
@@ -196,7 +197,7 @@ const CTASection = () => {
                   <button
                     onClick={handleSubmit}
                     disabled={isSubmitting}
-                    className="w-full bg-[#B7410E] hover:bg-[#B7410E]/90 hover:shadow-lg hover:shadow-[#B7410E]/25 disabled:bg-gray-400 disabled:hover:bg-gray-400 disabled:shadow-none text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group transform hover:scale-[1.02] font-[Gotham,sans-serif]"
+                    className="w-full border border-[#B7410E] text-[#B7410E] bg-transparent hover:bg-[#B7410E] hover:text-white font-gotham text-sm px-4 py-2 rounded-none transition-all duration-300 flex items-center justify-center space-x-2 group disabled:bg-gray-400 disabled:hover:bg-gray-400 disabled:text-gray-500 disabled:border-gray-400"
                   >
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     <span>
