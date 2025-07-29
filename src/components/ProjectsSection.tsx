@@ -197,6 +197,18 @@ const ProjectsSection: React.FC = () => {
                       className={`w-full h-full object-contain p-1 ${
                         hoveredProject === project.title ? 'project-icon-colored' : 'project-icon-grayscale'
                       } md:project-icon-grayscale md:hover:project-icon-colored`}
+                      style={{
+                        padding: 0,
+                        margin: 0,
+                        display: 'block',
+                        transform: 'scale(1.50)', // Try scaling 1.25, adjust higher if needed!
+                        overflow: 'hidden',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        alignSelf: 'center',
+                        justifySelf: 'center',
+                        alignContent: 'center'
+                      }}
                       onError={(e) => {
                         e.currentTarget.src = "/placeholder.svg";
                       }}

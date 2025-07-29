@@ -87,8 +87,15 @@ const Header = () => {
       <header className="bg-[#B7410E] py-2 px-4 md:px-6 fixed top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
-          <div className="text-white text-lg md:text-xl font-gotham font-semibold tracking-wider">
-            SURIL UDESHI
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/images/logo.png" 
+              alt="Suril Udeshi Logo" 
+              className="h-8 w-auto"
+            />
+            <div className="text-white text-lg md:text-xl font-gotham font-semibold tracking-wider">
+              SURIL UDESHI
+            </div>
           </div>
 
           {/* Desktop Navigation */}
