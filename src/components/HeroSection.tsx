@@ -165,7 +165,7 @@ const HeroSection = () => {
                     Recognition
                   </h2>
                   <p className="text-gray-600 text-xs md:text-sm leading-relaxed tracking-[0.02em] flex-grow font-[Lato,sans-serif] mb-0">
-                    <span className="text-black font-medium font-[Lato,sans-serif]">"Restaurant Consultant of the Year 2024"</span> by Restaurant Guru. 
+                    <span className="text-black font-medium font-[Lato,sans-serif]">"RESTAURANT CONSULTANT OF THE YEAR 2024"</span> by Restaurant Guru. 
                     Winner of Gujarat Tourism Awards & Food Connoisseurs awards in 2024 and 2022.
                   </p>
                   <a href="#recognition" className="mt-1 text-[#B7410E] text-xs md:text-sm font-[Lato,sans-serif] inline-flex items-center hover:underline w-fit">
