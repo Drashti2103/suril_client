@@ -225,11 +225,6 @@ const HeroSection = () => {
                   an unparalleled understanding of both traditional flavors and contemporary dining expectations. 
                   His approach combines meticulous attention to detail with innovative thinking.
                 </p>
-                <p className="text-gray-700 text-sm md:text-base leading-relaxed tracking-[0.02em] font-[Lato,sans-serif] mb-0">
-                  Every project undertaken reflects a commitment to excellence, sustainability, and creating 
-                  memorable dining experiences that resonate with guests long after their visit. 
-                  <span className="text-black font-medium font-[Lato,sans-serif]"> Partner with expertise that delivers results.</span>
-                </p>
               </div>
             </div>
           </div>
